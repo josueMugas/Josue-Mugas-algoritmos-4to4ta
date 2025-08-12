@@ -56,6 +56,7 @@ def banco():
                     break
                 else:
                     print("ingrse una opcion valida")
+
 def IMC():
     try:
         altura=int(input("ingrese su altura: "))
@@ -106,4 +107,33 @@ def volteador():
     for substring in palabrasSplit:
         palabraAlrevez += " "+substring[::-1]
     print(palabraAlrevez)
-volteador()
+
+
+def alumnos():
+    Lista_Nombres = []
+    Seguimos = True
+
+    while Seguimos:
+        try:
+            Ingreso_Usuario = int(input("""
+
+                1. Ingresar alumno en lista
+                2. Ver Alumno
+                3. Salir
+            """))
+            if Ingreso_Usuario == 1:
+                Nombre_a_Ingresar = input("Ingrese un nombre")
+                Lista_Nombres.append(Nombre_a_Ingresar)
+                Seguimos = True
+            elif Ingreso_Usuario == 2:
+                print("Lista de Alumnos", Lista_Nombres)
+                Ver_Alumno = int(input("Ingrese indice de alumno"))
+                print(Lista_Nombres[Ver_Alumno - 1])
+                Seguimos = True
+            elif Ingreso_Usuario == 3:
+                print("chau")
+                Seguimos = False
+        except ValueError:
+            print("Tipo de dato ingresado incorrecto")
+        except IndexError:
+            print("Indice de la lista no disponible")
