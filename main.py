@@ -43,8 +43,9 @@ def menu():
         elif opcion == "3":
             buscar_contacto()
         elif opcion == "4":
-            print("kill your self 🖕🖕")
+            print("saliendo...")
             break
         else:
             print("Opción inválida. Intente de nuevo.\n")
 menu()
+
