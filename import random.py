@@ -21,9 +21,6 @@ while True:
     if not ("_" in palabra_):
         print(f"ganaste!! en {intentos} intentos")
         break
-    if not("_" in palabra_):
-        print(f"ganaste!! en {intentos} intentos")
-        break
     elif intentos==7:
         print(f"perdiste:( la palabra era {palabraAdivinar}")
         break
