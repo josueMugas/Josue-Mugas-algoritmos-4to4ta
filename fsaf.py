@@ -52,7 +52,7 @@ def promedio():
         filaNueva = []
         for y in range(len(matriz[x])):
             suma+=matriz[x][y]
-    promedio=suma/16
+    promedio=suma/12
     for x in range(len(matriz)):
         filaNueva=[]
         for y in range(len(matriz[x])):
