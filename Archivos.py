@@ -75,8 +75,7 @@ def menu():
             break
         else:
             print("Opción inválida. Intente de nuevo.\n")
-
-def crearArchivoContactos():
     with open("contactos.txt","w",encoding="utf-8") as archivo:
         for x in range(len(nombres)):
+
             archivo.write(f"{nombres[x]} - {telefonos[x]}\n")
