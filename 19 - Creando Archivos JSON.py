@@ -1,3 +1,4 @@
+import json
 def Ejercicio1_2_6():
     informacion={
             "Nombre":"Josue",
@@ -36,15 +37,16 @@ def Ejercicio1_2_6():
             Profecion: {informacion['Profecion']}
             Email: {informacion['Email']}
             """)
-    with open("ejercicio1.txt","w") as archivo:
-        archivo.write("Ejercicio 1\n")
-        archivo.write(f"el diccionario es {informacion}\n")
-    with open("ejercicio2.txt","w") as archivo:
-        archivo.write("Ejercicio 2\n")
-        archivo.write(f"el diccionario es {informacion}\n")
-    with open("ejercicio6.txt","w") as archivo:
-        archivo.write("Ejercicio 6\n")
-        archivo.write(f"el diccionario es {informacion}\n")
+    with open("ejercicio1.json","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 1\n", archivo, indent=4, ensure_ascii=False)
+        json.dump(f"el diccionario es {informacion}\n", archivo, indent=4, ensure_ascii=False)
+    with open("ejercicio2.JSON","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 2\n", archivo, indent=4, ensure_ascii=False)
+        json.dump(f"el diccionario es {informacion}\n", archivo, indent=4, ensure_ascii=False)
+    with open("ejercicio6.JSON","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 6\n", archivo, indent=4, ensure_ascii=False)
+        json.dump(f"el diccionario es {informacion}\n", archivo, indent=4, ensure_ascii=False)
+Ejercicio1_2_6()
 def ejercicio3Y4():
     Notas={
             "Lengua":8,
@@ -62,12 +64,12 @@ def ejercicio3Y4():
         promedio+=Notas[nota]
     promedio/=cantidad
     print(f"el promedio es:{promedio}")
-    with open("ejercicio3.txt","w") as archivo:
-        archivo.write("Ejercicio 3\n")
-        archivo.write(f"el diccionario es {Notas}\n")
-    with open("ejercicio4.txt","w") as archivo:
-        archivo.write("Ejercicio 4\n")
-        archivo.write(f"el diccionario es {Notas}\n")
+    with open("ejercicio3.JSON","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 3")
+        json.dump(f"el diccionario es {Notas}")
+    with open("ejercicio4.JSON","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 4")
+        json.dump(f"el diccionario es {Notas}")
 def capitales_paises():
     paises = {
         "Argentina": "Buenos Aires",
@@ -85,9 +87,9 @@ def capitales_paises():
         print(f"La capital de {pais} es {capital}.")
     else:
         print("Ese país no está" )
-    with open("ejercicio5.txt","w") as archivo:
-        archivo.write("Ejercicio 5\n")
-        archivo.write(f"el diccionario es {paises}\n")
+    with open("ejercicio5.JSON","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 5\n")
+        json.dump(f"el diccionario es {paises}\n")
 def calcular_costo():
     precios = {
         "pan": 300,
@@ -104,12 +106,9 @@ def calcular_costo():
         print(f"El costo total de {cantidad} {producto}(s) es ${total}.")
     else:
         print("El producto no está en la tienda.")
-
-    for producto, precio in precios.items():
-        archivo.write(f"{producto}: ${precio}\n")
-    with open("ejercicio6.txt","w") as archivo:
-        archivo.write("Ejercicio 6\n")
-        archivo.write(f"el diccionario es {precios}\n")
+    with open("ejercicio6.json","w") as archivo:
+        json.dump("Ejercicio 6\n")
+        json.dump(f"el diccionario es {precios}\n")
 #-------------------------------------------------------------------------------------------#
 
 productos = [
@@ -158,6 +157,6 @@ def menu():
             break
         else:
             print("Opción no válida.")
-    with open("ejercicio7.txt","w") as archivo:
-        archivo.write("Ejercicio 7\n")
-        archivo.write(f"el diccionario es {productos}\n")
+    with open("ejercicio7.json","w",encoding="utf-8") as archivo:
+        json.dump("Ejercicio 7\n")
+        json.dump(f"el diccionario es {productos}\n")
